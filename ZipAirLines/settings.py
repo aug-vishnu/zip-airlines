@@ -127,3 +127,8 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+MAX_PLANES = 10
+TANK_LITERS = 200
+MULTIPLIED_VALUE = 0.80
+FUEL_BY_PASSENGER = 0.002

@@ -1,3 +1,15 @@
-from django.shortcuts import render
+from rest_framework.views import APIView
+from rest_framework.response import Response
 
-# Create your views here.
+from .serializers import AirlineSerializer
+
+
+class AirlineView(APIView):
+    """
+    List all snippets, or create a new snippet.
+    """
+
+    def post(self, request, format=None):
+        serializer = AirlineSerializer(data=request.data)
+        if serializer.is_valid(raise_exception=True):
+            return Response(serializer.data)
